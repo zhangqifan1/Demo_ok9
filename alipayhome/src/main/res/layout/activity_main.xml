@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.as.alipayhome.widgets.APHeaderView
+        android:id="@+id/alipay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.as.alipayhome.widgets.APSnapView
+            android:id="@id/alipay_snap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+          <TextView
+              android:background="#f0f0"
+              android:gravity="center"
+              android:text="我是内容内容可以自定义,一会我就盖上去,嘿嘿"
+              android:textStyle="bold"
+              android:textSize="22sp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+        </com.as.alipayhome.widgets.APSnapView>
+
+        <LinearLayout
+            android:background="#f050f0"
+            android:id="@+id/alipay_grid_menu"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:text="不盖上去,只是顶上去,,可以当RecyclerView首条目"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+        <com.as.alipayhome.widgets.APBarView
+            android:id="@id/alipay_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+            <LinearLayout
+                android:id="@+id/bar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:background="#ff0"
+                    android:gravity="center"
+                    android:text="顶上去会显示"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/bar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:background="#f00"
+                    android:gravity="center"
+                    android:text="顶上去会隐藏"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </com.as.alipayhome.widgets.APBarView>
+
+    </com.as.alipayhome.widgets.APHeaderView>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/alipay_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.as.alipayhome.widgets.APScrollingBehavior"
+        android:overScrollMode="never"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
